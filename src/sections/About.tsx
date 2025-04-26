@@ -4,20 +4,28 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 
-const tabs = ['about', 'background', 'education']
+// Define tabs strictly
+const tabs = ['about', 'background', 'education'] as const
+type TabKey = typeof tabs[number]
 
-const tabContent = {
+// Tab content typed properly
+const tabContent: Record<TabKey, {
+  icon: string
+  heading: string
+  text: React.ReactNode
+  image: string
+}> = {
   about: {
     icon: '/hey-there.svg',
     heading: 'Welcome to We’re All Mad Here Therapy,',
     text: (
       <>
-        <p className='max-w-[470px]'>
+        <p className="max-w-[470px]">
           A space where the strange, the sensitive, the searching, and the beautifully complex are all welcome.
           Rooted in LGBTQ2IA+ care, we specialize in creating a therapeutic space where identity, emotion, and imagination are embraced.
         </p>
         <br />
-        <p className='font-bold max-w-[470px]'>
+        <p className="font-bold max-w-[470px]">
           Come as you are. Stay as you grow. We’re all mad here — and that’s more than okay.
         </p>
       </>
@@ -27,17 +35,26 @@ const tabContent = {
   background: {
     icon: '/my-background.svg',
     heading: 'Foundations in Therapy and Counseling Care',
-    text: `With a background in trauma-informed care and creative expression, Mary helps clients rediscover their inner voice.`,
+    text: (
+      <p>
+        With a background in trauma-informed care and creative expression, Mary helps clients rediscover their inner voice.
+      </p>
+    ),
     image: '/Mary-Background.png',
   },
   education: {
     icon: '/my-education.svg',
     heading: 'Credentials & Education Rooted in Care',
-    text: `Mary holds an MS in Counseling Psychology and is a certified expressive arts therapist.`,
+    text: (
+      <p>
+        Mary holds an MS in Counseling Psychology and is a certified expressive arts therapist.
+      </p>
+    ),
     image: '/mary-education.png',
   },
 }
 
+// Quotes
 const quotes = [
   {
     text: "I can't go back to yesterday, because I was a different person then.",
@@ -54,7 +71,7 @@ const quotes = [
 ]
 
 export function About() {
-  const [activeTab, setActiveTab] = useState('about')
+  const [activeTab, setActiveTab] = useState<TabKey>('about')
   const [quoteIndex, setQuoteIndex] = useState(0)
   const [isFading, setIsFading] = useState(false)
 
@@ -78,97 +95,97 @@ export function About() {
   }, [])
 
   return (
-    <div className="relative z-0 ">
+    <div className="relative z-0">
       {/* Main Section Content */}
-      <section className="relative z-10 bg-dark-gray px-6 sm:px-12 md:px-20 text-white pt-2 ">
-      <div className="max-w-7xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 sm:gap-12 items-center">
-  {/* Left Card with Tabs */}
-  <div className="bg-medium-gray px-6 py-8 sm:px-14 sm:py-14 rounded-xl shadow-lg space-y-6 w-full min-w-[330px] min-h-[500px]">
-    {/* Tabs */}
-    <div className="flex justify-center gap-8 text-sm text-md uppercase tracking-widest pb-2">
-      {tabs.map((tab) => (
-        <button
-          key={tab}
-          onClick={() => setActiveTab(tab)}
-          className={clsx(
-            'transition-colors',
-            activeTab === tab
-              ? 'text-cta-pink border-b-[1px] border-cta-pink/60'
-              : 'text-white/70 hover:text-white'
-          )}
-        >
-          {tab}
-        </button>
-      ))}
-    </div>
+      <section className="relative z-10 bg-dark-gray px-6 sm:px-12 md:px-20 text-white pt-2">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 sm:gap-12 items-center">
+          {/* Left Card with Tabs */}
+          <div className="bg-medium-gray px-6 py-8 sm:px-14 sm:py-14 rounded-xl shadow-lg space-y-6 w-full min-w-[330px] min-h-[500px]">
+            {/* Tabs */}
+            <div className="flex justify-center gap-8 text-sm text-md uppercase tracking-widest pb-2">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={clsx(
+                    'transition-colors',
+                    activeTab === tab
+                      ? 'text-cta-pink border-b-[1px] border-cta-pink/60'
+                      : 'text-white/70 hover:text-white'
+                  )}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
 
-    {/* Tab Content */}
-    <div className="space-y-4">
-      <img src={tabContent[activeTab].icon} alt={`${activeTab} icon`} />
-      <h2 className="text-4xl sm:text-5xl text-cta-pink">{tabContent[activeTab].heading}</h2>
-      <div className="text-white/80 space-y-3">{tabContent[activeTab].text}</div>
-    </div>
-  </div>
+            {/* Tab Content */}
+            <div className="space-y-4">
+              <img src={tabContent[activeTab].icon} alt={`${activeTab} icon`} />
+              <h2 className="text-4xl sm:text-5xl text-cta-pink">{tabContent[activeTab].heading}</h2>
+              <div className="text-white/80 space-y-3">{tabContent[activeTab].text}</div>
+            </div>
+          </div>
 
-  {/* Image - responsive position and height */}
-  <div className="flex justify-center items-center mb-6 md:mb-0">
-    <Image
-      src={tabContent[activeTab].image}
-      alt={activeTab}
-      width={550}
-      height={500}
-      className="transition-all duration-500 h-[300px] sm:h-[500px] md:h-[600px] w-auto object-contain lg:pl-10"
-    />
-  </div>
-</div>
+          {/* Right Image */}
+          <div className="flex justify-center items-center mb-6 md:mb-0">
+            <Image
+              src={tabContent[activeTab].image}
+              alt={activeTab}
+              width={550}
+              height={500}
+              className="transition-all duration-500 h-[300px] sm:h-[500px] md:h-[600px] w-auto object-contain lg:pl-10"
+            />
+          </div>
+        </div>
       </section>
+
+      {/* Background and quote section */}
       <div className="relative z-0">
-  {/* Main Section - dark background */}
-  <section className="bg-dark-gray px-6 sm:px-12 md:px-20 text-[#F8FAFC] pt-0 pb-40">
-    {/* your About content here */}
-  </section>
+        <section className="bg-dark-gray px-6 sm:px-12 md:px-20 text-[#F8FAFC] pt-0 pb-40" />
 
-  {/* White push-up layer to stop dark background */}
-  <div className="absolute bottom-0 left-0 w-full h-1/4 bg-[#F8FAFC] z-0 pointer-events-none" />
+        {/* White push-up layer to stop dark background */}
+        <div className="absolute bottom-0 left-0 w-full h-1/4 bg-[#F8FAFC] z-0 pointer-events-none" />
 
-  {/* Quote Block (unchanged) */}
-  <div className="mt-[-100px] px-4 sm:px-12 md:px-20 relative z-10">
-    <div className="bg-forest text-[#F8FAFC] px-6 py-10 min-h-[180px] rounded-xl max-w-4xl mx-auto flex items-center justify-between gap-4">
-      {/* Left Arrow */}
-      <button
-        onClick={() => changeQuote('prev')}
-        className="text-2xl px-2 hover:text-white/80 transition"
-        aria-label="Previous Quote"
-      >
-        ←
-      </button>
+        {/* Quote Block */}
+        <div className="mt-[-100px] px-4 sm:px-12 md:px-20 relative z-10">
+          <div className="bg-forest text-[#F8FAFC] px-6 py-10 min-h-[180px] rounded-xl max-w-4xl mx-auto flex items-center justify-between gap-4">
+            {/* Left Arrow */}
+            <button
+              onClick={() => changeQuote('prev')}
+              className="text-2xl px-2 hover:text-white/80 transition"
+              aria-label="Previous Quote"
+            >
+              ←
+            </button>
 
-      {/* Quote Content */}
-      <div
-        className={clsx(
-          'flex-1 text-center transition-opacity duration-300',
-          isFading ? 'opacity-0' : 'opacity-100'
-        )}
-      >
-        <p className="text-2xl italic font-serif">
-          "{quotes[quoteIndex].text}"
-        </p>
-        <p className="text-sm mt-2 opacity-80">
-          — {quotes[quoteIndex].author}
-        </p>
+            {/* Quote Content */}
+            <div
+              className={clsx(
+                'flex-1 text-center transition-opacity duration-300',
+                isFading ? 'opacity-0' : 'opacity-100'
+              )}
+            >
+              <p className="text-2xl italic font-serif">
+                "{quotes[quoteIndex].text}"
+              </p>
+              <p className="text-sm mt-2 opacity-80">
+                — {quotes[quoteIndex].author}
+              </p>
+            </div>
+
+            {/* Right Arrow */}
+            <button
+              onClick={() => changeQuote('next')}
+              className="text-2xl px-2 hover:text-white/80 transition"
+              aria-label="Next Quote"
+            >
+              →
+            </button>
+          </div>
+        </div>
       </div>
-
-      {/* Right Arrow */}
-      <button
-        onClick={() => changeQuote('next')}
-        className="text-2xl px-2 hover:text-white/80 transition"
-        aria-label="Next Quote"
-      >
-        →
-      </button>
-    </div>
-  </div>
-</div>
     </div>
   )
 }
+
