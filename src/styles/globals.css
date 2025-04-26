@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Serif Display', serif;
+}
+
+a {
+    @apply transition-opacity duration-300 ease-in-out;
+  }
+  
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .curve-bottom {
+    clip-path: ellipse(100% 100% at 50% 100%);
+  }
+
+  /* globals.css */
+.overlap-previous-section {
+  margin-top: -100px;
+  padding-top: 100px;
+  position: relative;
+  z-index: 0;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* BUTTON GRADIENTS*/
+.glow-button {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  border-color: #ffffff;
+  color: #ffffff; /* turns text and icon white */
+}
+
+.glow-button:hover .glow-content {
+  /* Soft white glow for text & icon */
+  text-shadow:
+    0 0 4px rgba(255, 255, 255, 0.7),
+    0 0 8px rgba(255, 255, 255, 0.4);
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
+  fill: #ffffff; /* ensures icon turns white too */
+}
