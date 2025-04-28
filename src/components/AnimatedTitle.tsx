@@ -7,22 +7,28 @@ interface AnimatedTitleProps {
   phrases: string[]
   arrowSrc?: string
   className?: string
-  textColorClass?: string
+  prefixColorClass?: string // <-- NEW for prefix text
+  animatedColorClass?: string // <-- NEW for animated typing text
   bgColorClass?: string
   arrowClassName?: string
-  prefix?: string
+  prefix?: string | React.ReactNode
   speed?: 'fast' | 'slow'
+  forceBreak?: boolean;
+  as?: 'h1' | 'h2'
 }
 
 export default function AnimatedTitle({
   phrases,
   arrowSrc,
   className = 'text-4xl md:text-6xl font-medium !leading-[1.4]',
-  textColorClass = 'text-plum',
+  prefixColorClass = 'text-plum',
+  animatedColorClass = 'text-plum',
   bgColorClass = 'bg-[#EFF9E6]',
   arrowClassName = 'hidden sm:block w-10 lg:w-20 h-auto mt-1',
   prefix = '',
-  speed = 'slow'
+  speed = 'slow',
+  forceBreak = false,
+  as = 'h2'
 }: AnimatedTitleProps) {
   const [phraseIndex, setPhraseIndex] = useState(0)
   const [typedText, setTypedText] = useState('')
@@ -57,19 +63,30 @@ export default function AnimatedTitle({
     return () => clearTimeout(timeout)
   }, [typedText, isDeleting, phraseIndex, phrases, deletingSpeed, pauseTime])
 
-  return (
-    <h1 className={`${className} ${textColorClass}`}>
-      {prefix && <span>{prefix} </span>}
-      <span className={`${bgColorClass} inline-flex items-center gap-2 min-h-[1.5em]`}>
-        <span className="italic font-normal">
-          {typedText}
-          <span className="ml-1 w-[3px] h-[1.2em] bg-current inline-block animate-blink" />
-        </span>
-        {arrowSrc && (
-          <Image src={arrowSrc} alt="Arrow" width={80} height={20} className={arrowClassName} />
-        )}
+  const Tag = as;
+
+return (
+  <Tag className={className}>
+    {/* Prefix Text */}
+    {prefix && <span className={`${prefixColorClass}`}>{prefix}</span>}
+
+    {/* Animated Text */}
+    <span className={`${bgColorClass} inline-flex items-center gap-2 min-h-[2em]`}>
+      <span className={`italic font-normal ${animatedColorClass}`}>
+        {typedText}
+        <span className="ml-1 w-[3px] h-[1.2em] bg-current inline-block animate-blink" />
       </span>
-    </h1>
-  )
+      {arrowSrc && (
+        <Image
+          src={arrowSrc}
+          alt="Arrow"
+          width={80}
+          height={20}
+          className={arrowClassName}
+        />
+      )}
+    </span>
+  </Tag>
+)
 }
 

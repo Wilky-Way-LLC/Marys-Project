@@ -12,7 +12,7 @@ const AnimatedTitle = dynamic(() => import('../components/AnimatedTitle'), {
 
 export default function ContactSection() {
   return (
-  <section className="bg-[#D6E3E5] pb-[300px] px-4 z-10">
+  <section className="bg-[#D6E3E5] pb-[300px] px-8 z-10">
       <div className="max-w-7xl mx-auto bg-[#D6E3E5]">
         {/* Top Section with Heading & Arrows */}
         <div className="mb-16">
@@ -24,12 +24,18 @@ export default function ContactSection() {
             className="w-40"
           />
           <Subheading text="Contact" color="#32596C" />
-          <h2 className="text-5xl font-serif text-plum mt-6">
-          let’s start{' '}
+          <h2 className="text-6xl font-serif  mt-6">
           <AnimatedTitle
-            phrases={["together."]}
+                      prefix= { 
+                        <>
+                       Let's Do This {''}
+                        <br className="sm:hidden block" />
+                      </>
+                    }
+            phrases={["Together."]}
             className="inline text-5xl font-serif"
-            textColorClass="text-[#32596C]"
+              prefixColorClass="text-plum"
+              animatedColorClass="text-[#32596C]"
             bgColorClass="bg-[#f4feff90]"
           />
         </h2>

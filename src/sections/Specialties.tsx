@@ -89,11 +89,10 @@ export default function SpecialtiesSection() {
     <section className="bg-[#D9E5D6] pt-16 px-">
       <div className="max-w-6xl mx-auto pb-10">
         <h2 className="text-center text-2xl md:text-5xl">
-          who I{' '}
+          Who I{' '}
           <AnimatedTitle
-            phrases={['specialize in']}
+            phrases={['Specialize In']}
             className="inline text-2xl md:text-5xl"
-            textColorClass="text-[#38645d]"
             bgColorClass="bg-[#BADFB1]"
           />
         </h2>

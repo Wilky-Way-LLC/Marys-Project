@@ -49,11 +49,15 @@ export default function Process() {
 
         {/* Heading */}
         <h2 className="text-3xl md:text-5xl mt-10">
-          a gentle &{' '}
           <AnimatedTitle
-            phrases={["intentional journey."]}
+                      prefix= { 
+                        <>
+                        A Gentle & {''}
+                        <br className="sm:hidden block text-plum" />
+                      </>
+                      }
+            phrases={["Intentional Journey."]}
             className="inline text-3xl md:text-5xl"
-            textColorClass="text-[#38645d]"
             bgColorClass="bg-[#E0F2E1]"
           />
         </h2>

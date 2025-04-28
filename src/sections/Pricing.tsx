@@ -19,11 +19,17 @@ export default function PricingSection() {
           <div className="max-w-6xl mx-auto">
             <Subheading text="my pricing" color="#8183C9" />
             <h2 className="text-4xl md:text-5xl mt-6">
-          thoughtful care,{' '}
           <AnimatedTitle
+                      prefix= { 
+                        <>
+                        thoughtful care,{' '}
+                        <br className="sm:hidden block text-light-gray" />
+                      </>
+                      }
             phrases={["honest rates."]}
             className="inline text-4xl md:text-5xl"
-            textColorClass="text-[#7D74CD]"
+              prefixColorClass="text-light-gray"
+              animatedColorClass="text-[#7D74CD]"
             bgColorClass="bg-[#373951]"
           />
         </h2>

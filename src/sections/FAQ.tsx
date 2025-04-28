@@ -42,11 +42,10 @@ export default function FAQSection() {
       <div className="max-w-7xl px-4 mx-auto text-center">
         <Subheading text="FAQ" color="#F59999" />
         <h2 className="text-5xl text-plum mt-10">
-          any{' '}
+          Any{' '}
           <AnimatedTitle
-            phrases={["questions?"]}
+            phrases={["Questions?"]}
             className="inline text-5xl"
-            textColorClass="text-plum"
             bgColorClass="bg-[#FFDEDE]"
           />
         </h2>

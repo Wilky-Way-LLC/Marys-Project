@@ -25,11 +25,18 @@ export function Hero() {
 
           {/* Animated Title */}
           <AnimatedTitle
-  phrases={['your path forward.', 'your healing journey.', 'your next steps.', 'your new life.']}
-  prefix="Here to help guide you on"
-  arrowSrc="/arrow-hero.svg"
-  speed='fast'
-/>
+            phrases={[ 'Mental Clarity.', 'Peace of Mind.', 'Your New Life.']}
+            prefix= { 
+            <>
+            Guiding Your Path to {''}
+            <br className="hidden lg:block" />
+          </>
+        }
+            arrowSrc="/arrow-hero.svg"
+            speed='fast'
+            as='h1'
+          
+          />
 
           <p className="text-plum/70 max-w-lg">
           <span className='font-bold'>Mental health at your fingertips — and heart.</span> <br />

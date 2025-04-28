@@ -14,10 +14,14 @@ export function Services() {
       <div className="mb-16">
         <Subheading text="my services" color="#4b91b2" />
             <AnimatedTitle
-      phrases={['one step at a time.']}
-      prefix='here to help, '
+      phrases={['One Step at a Time.']}
+      prefix= { 
+        <>
+        Here to Help, {''}
+        <br className="block sm:hidden" />
+      </>
+      }
       className="text-3xl md:text-5xl mt-8"
-      textColorClass="text-plum"
       bgColorClass="bg-[#E0EFF2]"
     />
       </div>
