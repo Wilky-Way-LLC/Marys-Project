@@ -6,7 +6,7 @@ import { Button } from '../components/Button'
 
 export default function CTAfooter() {
   return (
-    <div className="relative z-10 -mt-[250px] mx-4">
+    <div className="relative z-10 -mt-[250px] mx-4 sm:mx-10">
       <div className="bg-dark-gray rounded-2xl max-w-6xl mx-auto px-8 py-10 md:py-8 flex flex-col lg:flex-row items-center gap-10 overflow-visible justify-center ">
         {/* Left Content */}
         <div className="max-w-xl z-10">

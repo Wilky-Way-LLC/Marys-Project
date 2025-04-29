@@ -10,6 +10,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolledDown, setScrolledDown] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const handleLinkClick = () => setMobileOpen(false)
 
   useEffect(() => {
     if (mobileOpen) return // disable scroll shrink when mobile nav is open
@@ -86,11 +87,11 @@ export function Header() {
       >
         <div className="flex flex-col gap-4 text-sm text-light-gray">
           <nav className="flex flex-col items-center gap-6">
-            <a className="hover:text-cta-pink" href="#About">About Me</a>
-            <a className="hover:text-cta-pink" href="#Services">My Practice</a>
-            <a className="hover:text-cta-pink" href="#Pricing">Pricing</a>
-            <a className="hover:text-cta-pink" href="#FAQ">FAQ</a>
-            <a className="hover:text-cta-pink" href="#Contact">Contact</a>
+            <a className="hover:text-cta-pink" href="#About" onClick={handleLinkClick}>About Me</a>
+            <a className="hover:text-cta-pink" href="#Services" onClick={handleLinkClick} >My Practice</a>
+            <a className="hover:text-cta-pink" href="#Pricing" onClick={handleLinkClick}>Pricing</a>
+            <a className="hover:text-cta-pink" href="#FAQ" onClick={handleLinkClick}>FAQ</a>
+            <a className="hover:text-cta-pink" href="#Contact" onClick={handleLinkClick}>Contact</a>
           </nav>
           <Button text="Book Now" href="/book" color="gradient" className="mt-4" />
         </div>

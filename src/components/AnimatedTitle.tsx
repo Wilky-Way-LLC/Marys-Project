@@ -20,7 +20,7 @@ interface AnimatedTitleProps {
 export default function AnimatedTitle({
   phrases,
   arrowSrc,
-  className = 'text-4xl md:text-6xl font-medium !leading-[1.4]',
+  className = 'text-4xl lg:text-6xl font-medium !leading-[1.4]',
   prefixColorClass = 'text-plum',
   animatedColorClass = 'text-plum',
   bgColorClass = 'bg-[#EFF9E6]',

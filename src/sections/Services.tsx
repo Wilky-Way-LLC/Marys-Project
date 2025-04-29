@@ -18,7 +18,7 @@ export function Services() {
           prefix={
             <>
               Here to Help, {''}
-              <br className="block sm:hidden" />
+              <br className="block lg:hidden" />
             </>
           }
           className="text-4xl md:text-5xl mt-8"

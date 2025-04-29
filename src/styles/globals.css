@@ -82,5 +82,17 @@ html {
 }
 
 section:target {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 400px;
+}
+
+@media (min-width: 640px) {
+  section:target {
+    scroll-margin-top: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  section:target {
+    scroll-margin-top: 100px;
+  }
 }

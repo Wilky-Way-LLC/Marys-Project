@@ -29,7 +29,7 @@ export function Hero() {
             prefix= { 
             <>
             Guiding Your Path to {''}
-            <br className="hidden lg:block" />
+            <br className="hidden sm:block" />
           </>
         }
             arrowSrc="/arrow-hero.svg"

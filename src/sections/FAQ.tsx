@@ -75,7 +75,7 @@ export default function FAQSection() {
 
         {/* Left content */}
         <div>
-          <div className="space-y-6 m-6 mb-20 sm:mb-0">
+          <div className="space-y-6 m-6 mb-20 lg:mb-0">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index
               return (

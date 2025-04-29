@@ -137,7 +137,7 @@ export function About() {
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 sm:gap-12 items-center">
           
           {/* Left Card with Tabs */}
-          <div className="bg-medium-gray px-6 py-8 sm:px-14 sm:py-14 rounded-xl shadow-lg space-y-6 w-full min-w-[330px] min-h-[500px]">
+          <div className="bg-medium-gray px-6 py-8 lg:px-14 sm:py-14 rounded-xl shadow-lg space-y-6 w-full min-w-[330px] min-h-[500px]">
             
             {/* Tabs */}
             <div className="flex justify-center gap-6 sm:gap-8 text-sm sm:text-md uppercase tracking-widest pb-2">
@@ -163,7 +163,7 @@ export function About() {
               isFadingTab ? 'opacity-0' : 'opacity-100'
             )}>
               <img src={tabContent[activeTab].icon} alt={`${activeTab} icon`} />
-              <h3 className="text-3xl sm:text-5xl text-light-gray">{tabContent[activeTab].heading}</h3>
+              <h3 className="text-3xl lg:text-5xl text-light-gray">{tabContent[activeTab].heading}</h3>
               <div className="text-white/80 space-y-3">{tabContent[activeTab].text}</div>
             </div>
           </div>
