@@ -42,7 +42,7 @@ export function Header() {
       <div className="flex items-center justify-between">
         {/* Logo + Brand */}
         <div className="flex items-center transition-all duration-300">
-          <a href="">
+          <a href="/">
             <Image
               src="/logo.svg"
               alt="Logo"

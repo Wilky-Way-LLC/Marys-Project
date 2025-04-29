@@ -44,8 +44,8 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 max-w-[500px]">
-            <Button text="Book Now" href="/book" color="gradient" />
-            <Button text="Services" href="/services" color="purple" />
+            <Button text="Book Now" href="#Book" color="gradient" />
+            <Button text="Services" href="#Services" color="purple" />
           </div>
 
           <div className="flex flex-wrap justify-center sm:justify-normal items-center gap-x-4 gap-y-4 pt-2 text-md text-[#6493A5]">

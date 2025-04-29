@@ -34,7 +34,7 @@ export default function Footer() {
             <h4 className="font-semibold font-sans text-base mb-4 text-[#86ABBA]">contact</h4>
             <div className="flex items-center gap-2 mb-4">
               <Image src="/email-pink.svg" alt="Email" width={16} height={16} />
-              <a href="mailto:email@email.com" className="hover:text-white transition hover:opacity-80 hover:underline">email@email.com</a>
+              <a href="mailto:allmadheretherapysolutions@outlook.com" className="hover:text-white transition hover:opacity-80 hover:underline">allmadheretherapysolutions@outlook.com</a>
             </div>
             <div className="flex items-center gap-2 mb-10">
               <Image src="/phone-pink.svg" alt="Phone" width={16} height={16} />

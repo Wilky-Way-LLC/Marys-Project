@@ -8,6 +8,7 @@ import clsx from 'clsx'
 const tabs = ['about', 'background', 'education'] as const
 type TabKey = typeof tabs[number]
 
+
 // Tab content typed properly
 const tabContent: Record<TabKey, {
   icon: string
@@ -95,11 +96,11 @@ const quotes = [
     author: "Lewis Carroll",
   },
 ]
-
 export function About() {
   const [activeTab, setActiveTab] = useState<TabKey>('about')
   const [quoteIndex, setQuoteIndex] = useState(0)
-  const [isFading, setIsFading] = useState(false)
+  const [isFading, setIsFading] = useState(false) // for quotes
+  const [isFadingTab, setIsFadingTab] = useState(false) // NEW for tab fade
 
   const changeQuote = (direction: 'next' | 'prev') => {
     setIsFading(true)
@@ -110,7 +111,16 @@ export function About() {
         return prev
       })
       setIsFading(false)
-    }, 200) // matches fade duration
+    }, 200)
+  }
+
+  const changeTab = (tab: TabKey) => {
+    if (tab === activeTab) return
+    setIsFadingTab(true)
+    setTimeout(() => {
+      setActiveTab(tab)
+      setIsFadingTab(false)
+    }, 200) // 200ms matches the fade animation
   }
 
   useEffect(() => {
@@ -125,14 +135,16 @@ export function About() {
       {/* Main Section Content */}
       <section id="About" className="relative z-10 bg-dark-gray px-6 sm:px-12 md:px-20 text-white pt-2">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 sm:gap-12 items-center">
+          
           {/* Left Card with Tabs */}
           <div className="bg-medium-gray px-6 py-8 sm:px-14 sm:py-14 rounded-xl shadow-lg space-y-6 w-full min-w-[330px] min-h-[500px]">
+            
             {/* Tabs */}
             <div className="flex justify-center gap-6 sm:gap-8 text-sm sm:text-md uppercase tracking-widest pb-2">
               {tabs.map((tab) => (
                 <button
                   key={tab}
-                  onClick={() => setActiveTab(tab)}
+                  onClick={() => changeTab(tab)}
                   className={clsx(
                     'transition-colors',
                     activeTab === tab
@@ -146,7 +158,10 @@ export function About() {
             </div>
 
             {/* Tab Content */}
-            <div className="space-y-4">
+            <div className={clsx(
+              'space-y-4 transition-opacity duration-300',
+              isFadingTab ? 'opacity-0' : 'opacity-100'
+            )}>
               <img src={tabContent[activeTab].icon} alt={`${activeTab} icon`} />
               <h3 className="text-3xl sm:text-5xl text-light-gray">{tabContent[activeTab].heading}</h3>
               <div className="text-white/80 space-y-3">{tabContent[activeTab].text}</div>
@@ -155,14 +170,20 @@ export function About() {
 
           {/* Right Image */}
           <div className="flex justify-center items-center mb-6 md:mb-0">
-            <Image
-              src={tabContent[activeTab].image}
-              alt={activeTab}
-              width={550}
-              height={500}
-              className="transition-all duration-500 h-[300px] sm:h-[500px] md:h-[600px] w-auto object-contain lg:pl-10"
-            />
+            <div className={clsx(
+              'transition-opacity duration-300',
+              isFadingTab ? 'opacity-0' : 'opacity-100'
+            )}>
+              <Image
+                src={tabContent[activeTab].image}
+                alt={activeTab}
+                width={550}
+                height={500}
+                className="transition-all duration-500 h-[300px] sm:h-[500px] md:h-[600px] w-auto object-contain lg:pl-10"
+              />
+            </div>
           </div>
+
         </div>
       </section>
 

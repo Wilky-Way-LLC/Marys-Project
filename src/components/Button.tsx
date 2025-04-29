@@ -24,14 +24,14 @@ export function Button({ text, href, color = 'pink', className }: ButtonProps) {
     <a
       href={href}
       className={clsx(
-        ' flex items-center place-content-center justify-center gap-4 px-8 py-2 text-sm font-semibold rounded transition-all text-center w-full border-[.5px] border-plum',
+        ' group flex items-center place-content-center justify-center gap-4 px-8 py-2 text-sm font-semibold rounded transition-all hover:bg-[linear-gradient(120deg,#F9C1C1,#EAB9E4,#F9C1C1)] text-center w-full border-[.5px] hover:scale-[1.03] border-plum hover:shadow-[0_0_20px_rgba(255,192,203,0.5)]',
         colorMap[color],
         'glow-button',
         className
       )}
     >
       <span>{text}</span>
-      <p className='text-2xl font-bold mb-[4.5px]'>→</p>
+      <p className="text-2xl font-bold mb-[4.5px] transform transition-transform duration-300 group-hover:translate-x-1">→</p>
     </a>
   )
 }
