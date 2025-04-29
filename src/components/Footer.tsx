@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-plum text-light-gray lg:pt-[300px] pt-[700px] mt-[-670px] lg:mt-[-250px] relative z-0">
+    <footer className="bg-plum text-light-gray lg:pt-[300px] pt-[700px] mt-[-670px] lg:mt-[-260px] relative z-0">
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-start gap-12">
         {/* Column 1: Logo + tagline */}
         <div className="lg:w-1/4 text-center lg:text-left flex flex-col justify-center">
@@ -34,11 +34,11 @@ export default function Footer() {
             <h4 className="font-semibold font-sans text-base mb-4 text-[#86ABBA]">contact</h4>
             <div className="flex items-center gap-2 mb-4">
               <Image src="/email-pink.svg" alt="Email" width={16} height={16} />
-              <a href="mailto:email@email.com" className="hover:text-white transition">email@email.com</a>
+              <a href="mailto:email@email.com" className="hover:text-white transition hover:opacity-80 hover:underline">email@email.com</a>
             </div>
             <div className="flex items-center gap-2 mb-10">
               <Image src="/phone-pink.svg" alt="Phone" width={16} height={16} />
-              <a href="tel:3455943044" className="hover:text-white transition">(345) 594-3044</a>
+              <a href="tel:6823920896" className="hover:text-white transition hover:opacity-80 hover:underline">(682) 392-0896</a>
             </div>
             <h4 className="font-semibold font-sans text-base mb-4 text-[#86ABBA]">hours & location</h4>
             <div className="flex items-center gap-2 mb-4">
@@ -53,27 +53,27 @@ export default function Footer() {
 
           {/* Column 3: Home + Emergencies */}
           <div>
-            <div className="flex flex-col md:flex-row md:items-start md:gap-20 mb-6">
+            <div className="flex flex-row md:items-start gap-20 mb-6">
               {/* Home Links */}
-              <div>
-                <h4 className="font-semibold font-sans text-base mb-4">Home</h4>
+              <div className='gap-5 flex flex-col'>
+                <a href='#' className="font-semibold font-sans text-base">Home</a>
                 <ul className="space-y-2">
-                  <li><a href="#portal" className="hover:text-white transition">My Portal</a></li>
-                  <li><a href="#services" className="hover:text-white transition">Services</a></li>
-                  <li><a href="#pricing" className="hover:text-white transition">Pricing</a></li>
-                  <li><a href="#faq" className="hover:text-white transition">FAQ</a></li>
-                  <li><a href="#process" className="hover:text-white transition">My Process</a></li>
+                  <li><a href="#portal" className="hover:text-white transition hover:opacity-80">My Portal</a></li>
+                  <li><a href="#Services" className="hover:text-white transition hover:opacity-80">Services</a></li>
+                  <li><a href="#Pricing" className="hover:text-white transition hover:opacity-80">Pricing</a></li>
+                  <li><a href="#FAQ" className="hover:text-white transition hover:opacity-80">FAQ</a></li>
+                  <li><a href="#Process" className="hover:text-white transition hover:opacity-80">My Process</a></li>
                 </ul>
               </div>
 
               {/* Emergency Link */}
-              <div className="mt-8 md:mt-0">
+              <div className=" md:mt-0">
                 <h4 className="font-semibold font-sans text-base mb-4">Emergencies</h4>
                 <a
                   href="https://988lifeline.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#7B8F76] underline hover:text-white transition"
+                  className="text-[#7B8F76] underline hover:text-cta-green/80 transition"
                 >
                   Suicide Lifeline
                 </a>
@@ -82,8 +82,8 @@ export default function Footer() {
 
             {/* Crisis Disclaimer */}
             <p className="text-sm text-light-gray/90">
-              If you are experiencing a mental health crisis, please call the <span className="underline text-[#7B8F76]">Suicide and Crisis Lifeline</span>,
-              a free, 24-hour hotline, at <span className="text-[#7B8F76] font-medium">988</span>. Your call will be routed to the crisis center near you.
+              If you are experiencing a mental health crisis, please call the <a href="https://988lifeline.org" className="underline text-[#7B8F76]">Suicide and Crisis Lifeline</a>,
+              a free, 24-hour hotline, at <a href="tel:988" className="text-[#7B8F76] font-medium">988</a>. Your call will be routed to the crisis center near you.
               If you are experiencing an emergency, please call <span className="text-[#7B8F76] font-medium">911</span> or go to the nearest emergency room.
             </p>
           </div>

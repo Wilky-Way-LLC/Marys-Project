@@ -87,11 +87,11 @@ export default function SpecialtiesSection() {
   }, [activeId, userClicked])
 
   return (
-    <section className="bg-[#D9E5D6] pt-16 px-4">
+    <section className="bg-[#D9E5D6] pt-16 px-">
       <div className="max-w-6xl mx-auto pb-10">
       <AnimatedTitle
   phrases={['Specialize In']}
-  prefix="Who I"
+  prefix="Who I "
   className="text-center text-4xl md:text-5xl font-serif"
   bgColorClass="bg-[#BADFB1]"
   as="h2" // <--- Force this AnimatedTitle to render an h2 tag
@@ -104,7 +104,7 @@ export default function SpecialtiesSection() {
           {/* Expanded Card */}
           <div
             ref={expandedRef}
-            className="bg-[#FAFAFA] rounded-xl p-10 shadow-sm flex flex-col items-center text-center justify-center min-h-[600px] max-w-[500px] mx-auto"
+            className="bg-[#FAFAFA] rounded-xl px-6 py-10 sm:p-10 shadow-sm flex flex-col items-center text-center justify-center min-h-[600px] max-w-[500px] mx-auto"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -118,7 +118,7 @@ export default function SpecialtiesSection() {
                 <img
                   src={active.icon}
                   alt={`${active.title} icon`}
-                  className="w-24 h-24 object-contain mb-4"
+                  className="w-16 sm:w-24 sm:h-24 object-contain mb-4"
                 />
                 <h3 className="text-3xl mb-3">{active.title}</h3>
                 <div className="text-md text-plum/80 space-y-2">
@@ -161,7 +161,7 @@ export default function SpecialtiesSection() {
                     <div className="w-16 h-16 mb-3">
                       <img src={s.icon} alt="" className="w-full h-full object-contain" />
                     </div>
-                    <h4 className="font-semibold font-sans text-md">{s.title}</h4>
+                    <h4 className="font-bold font-sans text-lg">{s.title}</h4>
                     <p className="text-md text-plum/80 mt-1">{s.miniText}</p>
                   </div>
                 </motion.button>

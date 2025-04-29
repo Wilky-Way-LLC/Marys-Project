@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      scrollBehavior: {
+        smooth: 'smooth',
+      },
       colors: {
         'light-gray': '#FBFCFD',
         'plum': '#3B345B',

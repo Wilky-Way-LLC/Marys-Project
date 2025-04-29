@@ -13,10 +13,10 @@ export function Hero() {
     <section className="relative pt-4 sm:pt-12 bg-[#F8FAFC]">
       <div className="max-w-[1450px] mx-auto flex flex-col-reverse md:grid md:grid-cols-2 items-center lg:mt-15 relative z-10 px-10 pb-10">
         {/* Left Text Content */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           <div className="relative inline-flex items-center gap-1">
             <img src="/location.svg" alt="Location" />
-            <p className="text-lg text-[#6493A5]">Washington State Telehealth</p>
+            <p className="text-md sm:text-lg text-[#6493A5]">Washington State Telehealth</p>
             <span
               className="absolute left-0 -bottom-[2px] h-[1px] w-full"
               style={{ backgroundColor: '#6493A5', opacity: 0.4 }}
@@ -48,7 +48,7 @@ export function Hero() {
             <Button text="Services" href="/services" color="purple" />
           </div>
 
-          <div className="flex flex-wrap justify-center sm:justify-normal items-center gap-x-4 gap-y-2 pt-2 text-md text-[#6493A5]">
+          <div className="flex flex-wrap justify-center sm:justify-normal items-center gap-x-4 gap-y-4 pt-2 text-md text-[#6493A5]">
             <div className="flex items-center gap-1">
               <img src="/therapy.svg" alt="Therapy Services" className="w-6 h-6" />
               <span>Therapy Services</span>
@@ -58,8 +58,8 @@ export function Hero() {
               <span>Coaching Services</span>
             </div>
             <div className="flex items-center gap-1">
-              <img src="/pride.svg" alt="LGBTQ+ Specialization" className="w-6 h-6" />
-              <span>LGBTQ+ Specialization</span>
+              <img src="/pride.svg" alt="LGBTQ2IA+ Specialization" className="w-6 h-6" />
+              <span>LGBTQ2IA+ Specialization</span>
             </div>
           </div>
         </div>

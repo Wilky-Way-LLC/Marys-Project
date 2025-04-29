@@ -39,21 +39,42 @@ const tabContent: Record<TabKey, {
   },
   background: {
     icon: '/my-background.svg',
-    heading: 'Foundations in Therapy and Counseling Care',
+    heading: ( <>
+      <span className="max-w-[470px] !leading-[1.2]">
+      Foundations in  <span className=' italic bg-dark-gray/30 !leading-[1.4] text-cta-pink px-1' >Therapy and Counseling Care</span>
+      </span>
+    </>
+      ),
     text: (
+      <>
       <p>
-        With a background in trauma-informed care and creative expression, Mary helps clients rediscover their inner voice.
-      </p>
+        I am a clinical social worker dedicated to creating a compassionate and affirming space for those navigating life's complexities. With experience supporting a diverse range of clients — including LGBTQ2IA+ individuals, adolescents, older adults, and families — I offer therapy that is both gentle and intentional. 
+        </p>
+      
+      <p className='font-semibold'> My approach is rooted in the belief that everyone deserves a place where they are seen, heard, and valued. </p>
+      
+      </>
     ),
     image: '/Mary-Background.png',
   },
   education: {
     icon: '/my-education.svg',
-    heading: 'Credentials & Education Rooted in Care',
+    heading: ( <>
+      <span className="max-w-[470px] !leading-[1.2]">
+      My  <span className=' italic bg-dark-gray/30 !leading-[1.4] text-cta-pink px-1' >Credentials & Education</span>
+      </span>
+    </>
+      ),
     text: (
+      <>
       <p>
-        Mary holds an MS in Counseling Psychology and is a certified expressive arts therapist.
+        I hold a Master’s degree in Social Work and am licensed as an LMSW (Licensed Master Social Worker) in Texas, as well as an Independent Associate Clinical Social Worker (IACSW) in Washington state. In Washington, I practice under the supervision of Dawn Egan, LICSW. </p>
+        
+        <p className='font-semibold'>I am committed to lifelong learning, regularly deepening my skills in trauma-informed care, and evidence-based therapeutic approaches to ensure the best possible support for my clients.
+
+        
       </p>
+      </>
     ),
     image: '/mary-education.png',
   },
@@ -102,7 +123,7 @@ export function About() {
   return (
     <div className="relative z-0">
       {/* Main Section Content */}
-      <section className="relative z-10 bg-dark-gray px-6 sm:px-12 md:px-20 text-white pt-2">
+      <section id="About" className="relative z-10 bg-dark-gray px-6 sm:px-12 md:px-20 text-white pt-2">
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-4 sm:gap-12 items-center">
           {/* Left Card with Tabs */}
           <div className="bg-medium-gray px-6 py-8 sm:px-14 sm:py-14 rounded-xl shadow-lg space-y-6 w-full min-w-[330px] min-h-[500px]">
@@ -127,7 +148,7 @@ export function About() {
             {/* Tab Content */}
             <div className="space-y-4">
               <img src={tabContent[activeTab].icon} alt={`${activeTab} icon`} />
-              <h3 className="text-4xl sm:text-5xl text-light-gray">{tabContent[activeTab].heading}</h3>
+              <h3 className="text-3xl sm:text-5xl text-light-gray">{tabContent[activeTab].heading}</h3>
               <div className="text-white/80 space-y-3">{tabContent[activeTab].text}</div>
             </div>
           </div>

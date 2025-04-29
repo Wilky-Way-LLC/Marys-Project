@@ -42,7 +42,7 @@ const phases = [
 
 export default function Process() {
   return (
-    <section className="bg-light-gray pt-10 px-">
+    <section id="Process" className="bg-light-gray pt-10 px-">
       <div className="max-w-6xl mx-auto text-center pb-10">
         {/* Subheading */}
         <Subheading text="my process" color="#6493A5" />
@@ -98,7 +98,7 @@ export default function Process() {
 
         {/* Button */}
         <div className="mt-10 sm:mt-16">
-          <div className="mx-auto sm:max-w-sm px-4">
+          <div className="mx-auto sm:max-w-sm px-10">
             <Button text="Let’s Start Now" href="/services" color="green" />
           </div>
         </div>

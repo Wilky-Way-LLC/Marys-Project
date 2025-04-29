@@ -13,7 +13,7 @@ export default function PricingSection() {
   return (
     <div className="relative z-0">
       {/* Dark Pricing Section */}
-      <section className="relative z-10 bg-dark-gray text-light-gray pt-10 pb-40 px-4">
+      <section id="Pricing" className="relative z-10 bg-dark-gray text-light-gray pt-10 pb-40 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="max-w-6xl mx-auto text-center lg:text-left">
@@ -35,7 +35,7 @@ export default function PricingSection() {
           </div>
 
           {/* Columns */}
-          <div className="mt-2 sm:mt-10 flex flex-col lg:flex-row justify-between gap-12 items-center lg:items-start lg:text-left">
+          <div className="mt-2 lg:mt-16 flex flex-col lg:flex-row justify-between gap-12 items-center lg:items-start lg:text-left">
             {/* Left Content */}
             <div className="flex-1 mt-5 max-w-lg">
               <h3 className="text-3xl md:text-4xl text-light-gray max-w-md">
@@ -44,7 +44,7 @@ export default function PricingSection() {
                                       <img
                         src="/pricing-underline.svg"
                         alt="underline"
-                        className="absolute left-0 -bottom-2 w-full h-auto -z-10 pointer-events-none"
+                        className="absolute left-0 -bottom-1 w-full h-auto -z-10 pointer-events-none"
                       />
                 </span>
               </h3>

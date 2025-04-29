@@ -12,7 +12,7 @@ const AnimatedTitle = dynamic(() => import('../components/AnimatedTitle'), {
 
 export default function ContactSection() {
   return (
-  <section className="bg-[#D6E3E5] pb-[300px] px-8 z-10">
+  <section id='Contact' className="bg-[#D6E3E5] pb-[300px] px-8 z-10">
       <div className="max-w-7xl mx-auto bg-[#D6E3E5] text-center">
         {/* Top Section with Heading & Arrows */}
         <div className="mb-10 sm:mb-16">

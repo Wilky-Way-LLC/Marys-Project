@@ -20,29 +20,39 @@ const faqs = [
       'Yes, to use my Washington Telehealth services, you must have a valid ID in Washington State, and be present at the time of the session.',
   },
   {
-    question: 'This is an example question',
-    answer: 'This is the answer to the example question.',
+    question: 'What is are the Sliding Scale Rates?',
+    answer:
+      'I believe that quality mental health care should be accessible. Sliding scale rates are available based on your financial situation. During our consultation, we can discuss options that work for you.',
   },
   {
-    question: 'This is an example question',
-    answer: 'This is the answer to the example question.',
+    question: 'Do you offer virtual or in-person sessions?',
+    answer:
+      'We offer virtual sessions, providing flexible care that fits into your life — no commute required. You can access support from the comfort and privacy of your own space.',
+  },
+  
+  {
+    question: 'How do I know if therapy is right for me?',
+    answer:
+      'If you’re feeling stuck, overwhelmed, curious, or simply seeking change, therapy might be a helpful place to start. You are not expected to have it all figured out before reaching out — that is what we’re here for.',
   },
   {
-    question: 'This is an example question',
-    answer: 'This is the answer to the example question.',
-  },
+    question: 'How long are sessions, and how often do we meet?',
+    answer:
+      'Sessions are typically 50 minutes long. How often we meet depends on your goals — some clients meet weekly, others biweekly. We will find a rhythm that feels supportive for you.'
+  }
+
 ]
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="pt-20">
+    <section id='FAQ' className="pt-20">
       {/* Title Section */}
       <div className="max-w-7xl px-4 mx-auto text-center">
         <Subheading text="FAQ" color="#F59999" />
         <AnimatedTitle
-  prefix="Any"
+  prefix="Any "
   phrases={["Questions?"]}
   className="text-4xl md:text-5xl text-plum mt-10"
   bgColorClass="bg-[#FFDEDE]"

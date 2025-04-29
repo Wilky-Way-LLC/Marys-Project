@@ -9,7 +9,7 @@ import Subheading from '../components/SubHeading'
 
 export function Services() {
   return (
-    <section className="bg-[#F8FAFC] px-6 sm:px-12 md:px-20 py-20 text-plum text-center">
+    <section id="Services" className="bg-[#F8FAFC] px-6 sm:px-12 md:px-20 py-20 text-plum text-center">
       {/* Section Heading */}
       <div className="mb-16">
         <Subheading text="my services" color="#4b91b2" />

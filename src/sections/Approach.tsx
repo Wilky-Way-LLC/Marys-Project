@@ -22,10 +22,10 @@ export default function Approach() {
           <div className="w-full md:w-1/2 max-w-[500px]">
             <Subheading text="my approach" color="#D3CDEB" />
             <h2 className="text-3xl md:text-4xl font-serif mt-6 leading-snug">
-              <span className="italic font-normal bg-[#504E7C]">Everyone</span>{' '}
+              <span className="italic font-normal text-light-gray/90 bg-[#504E7C]">Everyone</span>{' '}
               Deserves Help<span className="text-[#D3CDEB]">.</span>
             </h2>
-            <p className="text-base text-light-gray mt-4 leading-relaxed">
+            <p className="text-base text-light-gray mt-4 leading-relaxed ">
               Here, healing doesn’t have to be sterile. It can be creative, heartfelt, a little weird — and totally yours.
               <br /><br />
               While we center LGBTQ+ experiences, our doors are open to everyone who’s ready to be seen, heard, and supported in a space that celebrates the full spectrum of being human.

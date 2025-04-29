@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6 {
 a {
     @apply transition-opacity duration-300 ease-in-out;
   }
+
+  a {
+    transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  }
   
 
   html {
@@ -63,4 +67,20 @@ a {
     0 0 8px rgba(255, 255, 255, 0.4);
   filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.4));
   fill: #ffffff; /* ensures icon turns white too */
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Improves smoothness on iOS Safari */
+}
+
+/* Optional: fallback for older browsers */
+@supports not (scroll-behavior: smooth) {
+  html {
+    /* No fallback needed, they'll just have instant scroll */
+  }
+}
+
+section:target {
+  scroll-margin-top: 120px;
 }
