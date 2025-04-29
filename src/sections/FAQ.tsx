@@ -8,6 +8,7 @@ import CurvedDivider from '../components/CurvedDivider'
 // ✅ dynamic client-only import
 import dynamic from 'next/dynamic'
 
+
 const AnimatedTitle = dynamic(() => import('../components/AnimatedTitle'), {
   ssr: false
 })

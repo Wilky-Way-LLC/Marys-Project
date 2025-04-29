@@ -61,7 +61,7 @@ export default function PricingSection() {
 
               <p className="text-sm mt-4 text-light-gray/80 max-w-md text-center lg:text-left">
                 Ask me about my income-based{' '}
-                <a href="#" className="underline text-[#C3CDEB] hover:text-white transition-all ease-in-out">
+                <a href="#FAQ" className="underline text-[#C3CDEB] hover:text-white transition-all ease-in-out">
                   Sliding Scale
                 </a>.
               </p>
@@ -113,8 +113,8 @@ export default function PricingSection() {
             </div>
             <p className="text-sm text-light-gray">
               don’t see yours?{' '}
-              <a href="#" className="underline text-[#C3CDEB]">
-                view the full list &gt;
+              <a href="mailto:allmadheretherapysolutions@outlook.com" className="underline text-[#C3CDEB]">
+                email me for the full list &gt;
               </a>
             </p>
           </div>

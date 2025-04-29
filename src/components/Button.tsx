@@ -30,8 +30,8 @@ export function Button({ text, href, color = 'pink', className }: ButtonProps) {
         className
       )}
     >
-      <span>{text}</span>
-      <p className="text-2xl font-bold mb-[4.5px] transform transition-transform duration-300 group-hover:translate-x-1">→</p>
+      <span className=' my-[px] justify-center align-middle place-content-center items-center transform transition-transform duration-300 group-hover:translate-x-1  flex gap-3 '>{text}<p className="text-2xl md:pb-[5px]">→</p></span>
+      
     </a>
   )
 }

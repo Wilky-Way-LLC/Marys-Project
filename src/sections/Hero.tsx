@@ -65,11 +65,11 @@ export function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center lg:ml-28 pb-4 pr-6">
+        <div className="flex justify-center lg:ml-28 pb-4 mr-3 lg:pr-6">
           <img
             src="/mary-hero.png"
             alt="Mary"
-            className="max-w-full max-h-[600px] min-w-[350px] w-auto h-auto rounded-lg object-cover"
+            className="max-w-full max-h-[600px] min-w-[340px] w-auto h-auto rounded-lg object-cover"
           />
         </div>
       </div>
