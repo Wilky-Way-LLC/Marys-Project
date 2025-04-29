@@ -21,7 +21,7 @@ export function Services() {
         <br className="block sm:hidden" />
       </>
       }
-      className="text-3xl md:text-5xl mt-8"
+      className="text-4xl md:text-5xl mt-8"
       bgColorClass="bg-[#E0EFF2]"
     />
       </div>

@@ -47,20 +47,18 @@ export default function Process() {
         {/* Subheading */}
         <Subheading text="my process" color="#6493A5" />
 
-        {/* Heading */}
-        <h2 className="text-3xl md:text-5xl mt-10">
-          <AnimatedTitle
-                      prefix= { 
-                        <>
-                        A Gentle & {''}
-                        <br className="sm:hidden block text-plum" />
-                      </>
-                      }
-            phrases={["Intentional Journey."]}
-            className="inline text-3xl md:text-5xl"
-            bgColorClass="bg-[#E0F2E1]"
-          />
-        </h2>
+        <AnimatedTitle
+  prefix={
+    <>
+      A Gentle &{' '}
+      <br className="sm:hidden block text-plum" />
+    </>
+  }
+  phrases={["Intentional Journey."]}
+  className="text-4xl md:text-5xl mt-10"
+  bgColorClass="bg-[#E0F2E1]"
+  as="h2" // <-- This is important!
+/>
 
         {/* Phases */}
         <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-0">

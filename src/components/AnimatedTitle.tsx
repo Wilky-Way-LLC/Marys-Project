@@ -71,7 +71,7 @@ return (
     {prefix && <span className={`${prefixColorClass}`}>{prefix}</span>}
 
     {/* Animated Text */}
-    <span className={`${bgColorClass} inline-flex items-center gap-2 min-h-[2em]`}>
+    <span className={`${bgColorClass} inline-flex items-center gap-2 min-h-[1.2em]`}>
       <span className={`italic font-normal ${animatedColorClass}`}>
         {typedText}
         <span className="ml-1 w-[3px] h-[1.2em] bg-current inline-block animate-blink" />

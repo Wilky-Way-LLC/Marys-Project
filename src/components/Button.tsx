@@ -6,14 +6,15 @@ import clsx from 'clsx'
 interface ButtonProps {
   text: string
   href: string
-  color?: 'pink' | 'green' | 'gray' | 'purple' | 'gradient'
+  color?: 'pink' | 'green' | 'gray' | 'purple' | 'gradient' | 'lightpurple'
   className?: string
 }
 
 const colorMap = {
   pink: 'bg-cta-pink text-plum',
-  green: 'bg-[#A5CC9C] text-plum',
+  green: 'bg-[#C7E3CC] text-plum',
   gray: 'bg-gray-200 text-gray-800',
+  lightpurple: 'bg-[#A49FCD] text-plum',
   purple: 'bg-plum text-light-gray',
   gradient: 'bg-[linear-gradient(120deg,#EAB9E4,#F9C1C1,#EAB9E4)] text-plum'
 }

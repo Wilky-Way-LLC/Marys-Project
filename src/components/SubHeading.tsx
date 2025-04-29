@@ -7,7 +7,7 @@ type SubheadingProps = {
     return (
       <div className="inline-block text-center">
         <p
-          className="text-[20px] font-normal inline-block relative"
+          className="text-sm sm:text-md font-normal inline-block relative"
           style={{ color }}
         >
           {text}

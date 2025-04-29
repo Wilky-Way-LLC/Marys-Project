@@ -16,33 +16,31 @@ export default function PricingSection() {
       <section className="relative z-10 bg-dark-gray text-light-gray pt-10 pb-40 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto text-center lg:text-left">
             <Subheading text="my pricing" color="#8183C9" />
-            <h2 className="text-4xl md:text-5xl mt-6">
-          <AnimatedTitle
-                      prefix= { 
-                        <>
-                        thoughtful care,{' '}
-                        <br className="sm:hidden block text-light-gray" />
-                      </>
-                      }
-            phrases={["honest rates."]}
-            className="inline text-4xl md:text-5xl"
-              prefixColorClass="text-light-gray"
-              animatedColorClass="text-[#7D74CD]"
-            bgColorClass="bg-[#373951]"
-          />
-        </h2>
+            <AnimatedTitle
+  prefix={
+    <>
+      Thoughtful Care,{' '}
+      <br className="sm:hidden block text-light-gray" />
+    </>
+  }
+  phrases={["Honest Rates."]}
+  className="text-4xl md:text-5xl mt-6"
+  prefixColorClass="text-light-gray"
+  animatedColorClass="text-[#7D74CD]"
+  bgColorClass="bg-[#373951]"
+  as="h2" // <-- Important: tell AnimatedTitle to render an h2
+/>
           </div>
 
           {/* Columns */}
-          <div className="mt-10 flex flex-col lg:flex-row justify-between gap-12 items-start">
+          <div className="mt-2 sm:mt-10 flex flex-col lg:flex-row justify-between gap-12 items-center lg:items-start lg:text-left">
             {/* Left Content */}
-            <div className="flex-1">
-              <h3 className="text-2xl md:text-4xl leading-snug">
-                Helping you at a price<br />
-                you can <span className="italic relative inline-block">
-                  afford.
+            <div className="flex-1 mt-5 max-w-lg">
+              <h3 className="text-3xl md:text-4xl text-light-gray max-w-md">
+              Providing support that's within <span className="italic relative inline-block">
+              reach.
                                       <img
                         src="/pricing-underline.svg"
                         alt="underline"
@@ -51,17 +49,17 @@ export default function PricingSection() {
                 </span>
               </h3>
 
-              <p className="text-md text-light-gray/80 mt-6 max-w-md leading-relaxed">
-                I offer flexible pricing to make therapy accessible. A reduced cash rate is available for out-of-pocket
+              <p className="text-md text-light-gray/80 mt-4 max-w-md leading-relaxed">
+                I offer <strong>flexible pricing</strong> to make therapy accessible. A reduced cash rate is available for out-of-pocket
                 payments, and we’re happy to arrange payment plans when needed. Most major insurance plans are accepted —
                 just reach out and we'll help you figure out what works best for you.
               </p>
 
               <div className="mt-8 max-w-md">
-                <Button text="Let’s Connect" href="/contact" color="green" />
+                <Button text="Let’s Connect" href="/contact" color="lightpurple" />
               </div>
 
-              <p className="text-sm mt-4 text-light-gray">
+              <p className="text-sm mt-4 text-light-gray/80 max-w-md text-center lg:text-left">
                 Ask me about my income-based{' '}
                 <a href="#" className="underline text-[#C3CDEB] hover:text-white transition-all ease-in-out">
                   Sliding Scale
@@ -70,7 +68,7 @@ export default function PricingSection() {
             </div>
 
             {/* Pricing Card */}
-            <div className="bg-[#3B3738] text-center rounded-xl p-10 w-full max-w-sm flex-shrink-0">
+            <div className="bg-[#3B3738] text-center rounded-xl p-10 w-full max-w-sm mx-auto">
               <p className="uppercase text-sm tracking-wide text-white/70 mb-2">
                 Cash Rate, Individual
               </p>

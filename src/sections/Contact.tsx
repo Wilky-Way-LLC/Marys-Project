@@ -13,36 +13,35 @@ const AnimatedTitle = dynamic(() => import('../components/AnimatedTitle'), {
 export default function ContactSection() {
   return (
   <section className="bg-[#D6E3E5] pb-[300px] px-8 z-10">
-      <div className="max-w-7xl mx-auto bg-[#D6E3E5]">
+      <div className="max-w-7xl mx-auto bg-[#D6E3E5] text-center">
         {/* Top Section with Heading & Arrows */}
-        <div className="mb-16">
-          <Image
-            src="/arrows.svg"
-            alt="Decorative Arrows"
-            width={100}
-            height={50}
-            className="w-40"
-          />
+        <div className="mb-10 sm:mb-16">
+        <Image
+  src="/arrows.svg"
+  alt="Decorative Arrows"
+  width={100}
+  height={50}
+  className="w-40 mx-auto "
+/>
           <Subheading text="Contact" color="#32596C" />
-          <h2 className="text-6xl font-serif  mt-6">
           <AnimatedTitle
-                      prefix= { 
-                        <>
-                       Let's Do This {''}
-                        <br className="sm:hidden block" />
-                      </>
-                    }
-            phrases={["Together."]}
-            className="inline text-5xl font-serif"
-              prefixColorClass="text-plum"
-              animatedColorClass="text-[#32596C]"
-            bgColorClass="bg-[#f4feff90]"
-          />
-        </h2>
+  prefix={
+    <>
+      Let's Do This{' '}
+      <br className="sm:hidden block" />
+    </>
+  }
+  phrases={["Together."]}
+  className="text-4xl md:text-5xl font-serif text-center mt-6"
+  prefixColorClass="text-plum"
+  animatedColorClass="text-[#32596C]"
+  bgColorClass="bg-[#f4feff90]"
+  as="h2" // <-- important: tell AnimatedTitle to render as an h2
+/>
         </div>
 
         {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[800px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 max-w-[800px] mx-auto">
           {/* Card 1: Contact Info */}
           <div className="bg-[#FAFAFA] rounded-2xl p-12 flex flex-col items-center text-center">
             <Image
@@ -52,7 +51,7 @@ export default function ContactSection() {
               height={40}
               className="mb-4 w-16"
             />
-            <h3 className="text-[#6493A6] font-sans font-semibold text-2xl mb-4">
+            <h3 className="text-[#6493A6] font-sans font-bold text-2xl mb-4">
               Want to Chat?
             </h3>
             <div className="space-y-4 text-[#6493A6] text-md">

@@ -39,7 +39,7 @@ export function Hero() {
           />
 
           <p className="text-plum/70 max-w-lg">
-          <span className='font-bold'>Mental health at your fingertips — and heart.</span> <br />
+          <span className='font-bold'>Mental health at your fingertips.</span> <br /> 
           Whether you're navigating anxiety, identity, relationships, or the weight of it all, you're not alone — and you don't have to figure it out by yourself. Help is just a tap away.
           </p>
 

@@ -3,13 +3,11 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import CurvedDivider from '../components/CurvedDivider'
-// ✅ dynamic client-only import
 import dynamic from 'next/dynamic'
 
 const AnimatedTitle = dynamic(() => import('../components/AnimatedTitle'), {
   ssr: false
 })
-
 
 const specialties = [
   {
@@ -74,28 +72,30 @@ const specialties = [
 
 export default function SpecialtiesSection() {
   const [activeId, setActiveId] = useState('lgbtq')
+  const [userClicked, setUserClicked] = useState(false)
   const active = specialties.find((s) => s.id === activeId)!
   const expandedRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
+    if (!userClicked) return
+
     if (window.innerWidth < 768 && expandedRef.current) {
-      const offset = 100 // adjust this value if needed
+      const offset = 100
       const topPos = expandedRef.current.getBoundingClientRect().top + window.pageYOffset - offset
       window.scrollTo({ top: topPos, behavior: 'smooth' })
     }
-  }, [activeId])
+  }, [activeId, userClicked])
 
   return (
-    <section className="bg-[#D9E5D6] pt-16 px-">
+    <section className="bg-[#D9E5D6] pt-16 px-4">
       <div className="max-w-6xl mx-auto pb-10">
-        <h2 className="text-center text-2xl md:text-5xl">
-          Who I{' '}
-          <AnimatedTitle
-            phrases={['Specialize In']}
-            className="inline text-2xl md:text-5xl"
-            bgColorClass="bg-[#BADFB1]"
-          />
-        </h2>
+      <AnimatedTitle
+  phrases={['Specialize In']}
+  prefix="Who I"
+  className="text-center text-4xl md:text-5xl font-serif"
+  bgColorClass="bg-[#BADFB1]"
+  as="h2" // <--- Force this AnimatedTitle to render an h2 tag
+/>
         <p className="text-center text-xl font-medium text-plum/80 mt-5 px-8">
           I have clients from all walks of life, but I specialize in a few groups.
         </p>
@@ -140,7 +140,10 @@ export default function SpecialtiesSection() {
               return (
                 <motion.button
                   key={s.id}
-                  onClick={() => setActiveId(s.id)}
+                  onClick={() => {
+                    setActiveId(s.id)
+                    setUserClicked(true)
+                  }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={`relative min-h-[290px] rounded-xl p-4 transition-all duration-150 ${

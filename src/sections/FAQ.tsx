@@ -41,14 +41,13 @@ export default function FAQSection() {
       {/* Title Section */}
       <div className="max-w-7xl px-4 mx-auto text-center">
         <Subheading text="FAQ" color="#F59999" />
-        <h2 className="text-5xl text-plum mt-10">
-          Any{' '}
-          <AnimatedTitle
-            phrases={["Questions?"]}
-            className="inline text-5xl"
-            bgColorClass="bg-[#FFDEDE]"
-          />
-        </h2>
+        <AnimatedTitle
+  prefix="Any"
+  phrases={["Questions?"]}
+  className="text-4xl md:text-5xl text-plum mt-10"
+  bgColorClass="bg-[#FFDEDE]"
+  as="h2" // <- Important: this forces the AnimatedTitle to be an <h2>
+/>
       </div>
 
       {/* Main Content */}

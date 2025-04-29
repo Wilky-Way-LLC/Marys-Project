@@ -7,7 +7,7 @@ import { Button } from '../components/Button'
 export default function CTAfooter() {
   return (
     <div className="relative z-10 -mt-[250px] mx-4">
-      <div className="bg-dark-gray rounded-2xl max-w-6xl mx-auto px-6 sm:px-8 py-6 flex flex-col lg:flex-row items-center gap-10 overflow-visible justify-center ">
+      <div className="bg-dark-gray rounded-2xl max-w-6xl mx-auto px-8 py-10 md:py-8 flex flex-col lg:flex-row items-center gap-10 overflow-visible justify-center ">
         {/* Left Content */}
         <div className="max-w-xl z-10">
           <div className="flex flex-col items-start gap-3 mb-6">
@@ -17,7 +17,7 @@ export default function CTAfooter() {
 
           <h2 className="text-white text-4xl font-serif leading-tight mb-6">
             I’d love to{' '}
-            <span className="bg-[#3F3852] italic px-2">
+            <span className="bg-[#3F3852] italic px-1">
               connect with you!
             </span>
           </h2>

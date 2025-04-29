@@ -11,13 +11,18 @@ type TabKey = typeof tabs[number]
 // Tab content typed properly
 const tabContent: Record<TabKey, {
   icon: string
-  heading: string
+  heading: string | React.ReactNode
   text: React.ReactNode
   image: string
 }> = {
   about: {
     icon: '/hey-there.svg',
-    heading: 'Welcome to We’re All Mad Here Therapy,',
+    heading:      ( <>
+    <span className="max-w-[470px] !leading-[1.2]">
+      Welcome To <span className=' italic bg-dark-gray/30 !leading-[1.4] text-cta-pink px-1' >We're All Mad Here Therapy</span>
+    </span>
+  </>
+    ),
     text: (
       <>
         <p className="max-w-[470px]">
@@ -102,7 +107,7 @@ export function About() {
           {/* Left Card with Tabs */}
           <div className="bg-medium-gray px-6 py-8 sm:px-14 sm:py-14 rounded-xl shadow-lg space-y-6 w-full min-w-[330px] min-h-[500px]">
             {/* Tabs */}
-            <div className="flex justify-center gap-8 text-sm text-md uppercase tracking-widest pb-2">
+            <div className="flex justify-center gap-6 sm:gap-8 text-sm sm:text-md uppercase tracking-widest pb-2">
               {tabs.map((tab) => (
                 <button
                   key={tab}
@@ -122,7 +127,7 @@ export function About() {
             {/* Tab Content */}
             <div className="space-y-4">
               <img src={tabContent[activeTab].icon} alt={`${activeTab} icon`} />
-              <h2 className="text-4xl sm:text-5xl text-cta-pink">{tabContent[activeTab].heading}</h2>
+              <h3 className="text-4xl sm:text-5xl text-light-gray">{tabContent[activeTab].heading}</h3>
               <div className="text-white/80 space-y-3">{tabContent[activeTab].text}</div>
             </div>
           </div>
