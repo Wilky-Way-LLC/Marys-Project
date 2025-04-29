@@ -10,10 +10,11 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolledDown, setScrolledDown] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
+
   const handleLinkClick = () => setMobileOpen(false)
 
   useEffect(() => {
-    if (mobileOpen) return // disable scroll shrink when mobile nav is open
+    if (mobileOpen) return
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY
@@ -36,23 +37,22 @@ export function Header() {
   return (
     <header
       className={clsx(
-        "sticky top-0 z-50 bg-plum text-white px-4 sm:px-8 rounded-b-xl shadow-sm max-w-[1600px] mx-auto transition-all duration-300 ease-in-out",
-        scrolledDown ? "py-2" : "py-4"
+        'sticky top-0 z-50 bg-plum text-white transition-all duration-300 ease-in-out max-w-[1600px] mx-auto rounded-b-xl',
+        scrolledDown ? 'py-2' : 'py-4'
       )}
     >
-      <div className="flex items-center justify-between">
-        {/* Logo + Brand */}
-        <div className="flex items-center transition-all duration-300">
-          <a href="/">
-            <Image
-              src="/logo.svg"
-              alt="Logo"
-              width={scrolledDown ? 100 : 140}
-              height={scrolledDown ? 100 : 140}
-              className="transition-all duration-300"
-            />
-          </a>
-        </div>
+      {/* Inner container for layout */}
+      <div className="flex items-center justify-between relative px-4 sm:px-8 max-w-[1600px] mx-auto ">
+        {/* Logo */}
+        <a href="/" className="flex items-center transition-all duration-300">
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={scrolledDown ? 100 : 140}
+            height={scrolledDown ? 100 : 140}
+            className="transition-all duration-300"
+          />
+        </a>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex gap-10 text-sm text-light-gray">
@@ -63,13 +63,13 @@ export function Header() {
           <a className="hover:text-cta-pink" href="#Contact">Contact</a>
         </nav>
 
-        {/* CTA */}
+        {/* CTA Button */}
         <div className="hidden lg:block w-[200px]">
           <Button text="Book Now" href="/book" color="gradient" />
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden">
+        <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden z-50">
           {mobileOpen ? (
             <X className="w-10 h-10 bg-cta-pink/30 rounded-lg" />
           ) : (
@@ -78,22 +78,24 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Nav - animated dropdown with rounded corners + max-width */}
       <div
         className={clsx(
-          "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
-          mobileOpen ? "max-h-[500px] opacity-100 mt-12" : "max-h-0 opacity-0"
+          'absolute top-full left-0 right-0 z-40 lg:hidden flex justify-center transition-all duration-300 ease-in-out',
+          mobileOpen ? 'opacity-100 translate-y-0 max-h-[500px]' : 'opacity-0 -translate-y-2 max-h-0 pointer-events-none'
         )}
       >
-        <div className="flex flex-col gap-4 text-sm text-light-gray">
-          <nav className="flex flex-col items-center gap-6">
-            <a className="hover:text-cta-pink" href="#About" onClick={handleLinkClick}>About Me</a>
-            <a className="hover:text-cta-pink" href="#Services" onClick={handleLinkClick} >My Practice</a>
-            <a className="hover:text-cta-pink" href="#Pricing" onClick={handleLinkClick}>Pricing</a>
-            <a className="hover:text-cta-pink" href="#FAQ" onClick={handleLinkClick}>FAQ</a>
-            <a className="hover:text-cta-pink" href="#Contact" onClick={handleLinkClick}>Contact</a>
-          </nav>
-          <Button text="Book Now" href="/book" color="gradient" className="mt-4" />
+        <div className="w-full max-w-[1600px] bg-plum rounded-b-xl overflow-hidden px-6 py-8 -mt-3">
+          <div className="flex flex-col items-center gap-6 text-sm text-light-gray">
+            <nav className="flex flex-col items-center gap-10 mt-10">
+              <a href="#About" className="hover:text-cta-pink" onClick={handleLinkClick}>About Me</a>
+              <a href="#Services" className="hover:text-cta-pink" onClick={handleLinkClick}>My Practice</a>
+              <a href="#Pricing" className="hover:text-cta-pink" onClick={handleLinkClick}>Pricing</a>
+              <a href="#FAQ" className="hover:text-cta-pink" onClick={handleLinkClick}>FAQ</a>
+              <a href="#Contact" className="hover:text-cta-pink" onClick={handleLinkClick}>Contact</a>
+            </nav>
+            <Button text="Book Now" href="/book" color="gradient" className="mt-6" />
+          </div>
         </div>
       </div>
     </header>
