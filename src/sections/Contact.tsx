@@ -41,7 +41,7 @@ export default function ContactSection() {
         </div>
 
         {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 max-w-[800px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 max-w-[900px] mx-auto">
           {/* Card 1: Contact Info */}
           <div className="group bg-[#FAFAFA] rounded-2xl p-12 flex flex-col items-center text-center transition-all duration-300 hover:shadow-sm hover:scale-[1.02] hover:bg-[#f9fafa]">
   <Image
@@ -58,19 +58,19 @@ export default function ContactSection() {
     <div className="flex items-center justify-center gap-2">
       <Image src="/email.svg" alt="Email" width={16} height={16} />
       <a
-        href="mailto:email@email.com"
+        href="mailto:allmadheretherapysolutions@outlook.com"
         className="border-b border-[#86bdd357] hover:text-[#A0C6D6] transition-all duration-300 pb-[1px]"
       >
-        email@email.com
+        Email Me
       </a>
     </div>
     <div className="flex items-center justify-center gap-2">
       <Image src="/phone.svg" alt="Phone" width={16} height={16} />
       <a
-        href="tel:3455943044"
+        href="tel:6823920896"
         className="border-b border-[#86bdd357] hover:text-[#A0C6D6] transition-all duration-300 pb-[1px]"
       >
-        (345) 594-3044
+       Text: (682) 392-0896
       </a>
     </div>
   </div>
