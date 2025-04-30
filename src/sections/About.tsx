@@ -196,7 +196,7 @@ export function About() {
 
         {/* Quote Block */}
         <div className="mt-[-100px] px-4 sm:px-12 md:px-20 relative z-10">
-          <div className="bg-forest text-[#F8FAFC] px-6 py-10 min-h-[210px] md:min-h-[180px] rounded-xl max-w-4xl mx-auto flex items-center justify-between gap-4">
+          <div className="bg-forest text-[#F8FAFC] px-6 md:py-10 min-h-[250px] md:min-h-[180px] rounded-xl max-w-4xl mx-auto flex items-center justify-between gap-1">
             {/* Left Arrow */}
             <button
               onClick={() => changeQuote('prev')}
