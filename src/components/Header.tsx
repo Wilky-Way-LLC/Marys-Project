@@ -65,7 +65,7 @@ export function Header() {
 
         {/* CTA Button */}
         <div className="hidden lg:block w-[200px]">
-          <Button text="Book Now" href="/book" color="gradient" />
+          <Button text="Book Now" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="gradient" />
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -94,7 +94,7 @@ export function Header() {
               <a href="#FAQ" className="hover:text-cta-pink" onClick={handleLinkClick}>FAQ</a>
               <a href="#Contact" className="hover:text-cta-pink" onClick={handleLinkClick}>Contact</a>
             </nav>
-            <Button text="Book Now" href="/book" color="gradient" className="mt-6" />
+            <Button text="Book Now" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="gradient" className="mt-6" />
           </div>
         </div>
       </div>

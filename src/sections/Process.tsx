@@ -99,7 +99,7 @@ export default function Process() {
         {/* Button */}
         <div className="mt-10 sm:mt-16">
           <div className="mx-auto sm:max-w-sm px-10">
-            <Button text="Let’s Start Now" href="/services" color="green" />
+            <Button text="Let’s Start Now" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="green" />
           </div>
         </div>
       </div>

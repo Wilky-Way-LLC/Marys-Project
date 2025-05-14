@@ -84,16 +84,25 @@ const tabContent: Record<TabKey, {
 // Quotes
 const quotes = [
   {
-    text: "I can't go back to yesterday, because I was a different person then.",
-    author: "Alice, Alice in Wonderland",
-  },
-  {
-    text: "We're all mad here.",
+    text: "I'm not strange, weird, off, nor crazy, my reality is just different from yours",
     author: "The Cheshire Cat",
   },
   {
-    text: "Imagination is the only weapon in the war against reality.",
-    author: "Lewis Carroll",
+    text: `But I don’t want to go among mad people", Alice remarked.  
+"Oh, you can’t help that," said the Cat: "we’re all mad here.`,
+    author: "The Cheshire Cat",
+  },
+  {
+    text: "Who in the world am I? Ah, that's the great puzzle.",
+    author: "Alice, Alice in Wonderland",
+  },
+  {
+    text: "Every adventure requires a first step.",
+    author: "The Cheshire Cat",
+  },
+  {
+    text: "You're entirely bonkers. But I'll tell you a secret. All the best people are.",
+    author: "Alice, Alice in Wonderland",
   },
 ]
 export function About() {

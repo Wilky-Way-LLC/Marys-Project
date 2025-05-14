@@ -58,7 +58,7 @@ export default function Footer() {
               <div className='gap-5 flex flex-col'>
                 <a href='#' className="font-semibold font-sans text-base">Home</a>
                 <ul className="space-y-2">
-                  <li><a href="#portal" className="hover:text-white transition hover:opacity-80">My Portal</a></li>
+                  <li><a href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" className="hover:text-white transition hover:opacity-80">My Portal</a></li>
                   <li><a href="#Services" className="hover:text-white transition hover:opacity-80">Services</a></li>
                   <li><a href="#Pricing" className="hover:text-white transition hover:opacity-80">Pricing</a></li>
                   <li><a href="#FAQ" className="hover:text-white transition hover:opacity-80">FAQ</a></li>

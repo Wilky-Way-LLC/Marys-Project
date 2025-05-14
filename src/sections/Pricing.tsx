@@ -56,7 +56,7 @@ export default function PricingSection() {
               </p>
 
               <div className="mt-8 max-w-md">
-                <Button text="Let’s Connect" href="/contact" color="lightpurple" />
+                <Button text="Let’s Connect" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="lightpurple" />
               </div>
 
               <p className="text-sm mt-4 text-light-gray/80 max-w-md text-center lg:text-left">

@@ -25,7 +25,7 @@ export default function CTAfooter() {
           <p className="text-white text-base mb-8 max-w-md">
             When you book with me, you are able to choose your time and your hours based on when it’s convenient for you.
           </p>
-    <div className='max-w-md'><Button text="Free Consultation" href="/services" color="pink" /></div>
+    <div className='max-w-md'><Button text="Free Consultation" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="pink" /></div>
           
         </div>
 

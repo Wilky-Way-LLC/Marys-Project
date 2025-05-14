@@ -44,7 +44,7 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 max-w-[500px]">
-            <Button text="Book Now" href="#Book" color="gradient" />
+            <Button text="Book Now" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="gradient" />
             <Button text="Services" href="#Services" color="purple" />
           </div>
 

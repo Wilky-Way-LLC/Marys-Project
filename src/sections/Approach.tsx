@@ -31,7 +31,7 @@ export default function Approach() {
               While we center LGBTQ+ experiences, our doors are open to everyone who’s ready to be seen, heard, and supported in a space that celebrates the full spectrum of being human.
             </p>
             <div className="mt-6">
-              <Button text="Book an Appointment" href="/services" color="green" />
+              <Button text="Book an Appointment" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="green" />
             </div>
           </div>
         </div>
