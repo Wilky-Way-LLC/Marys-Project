@@ -100,23 +100,24 @@ export default function PricingSection() {
 
       {/* Insurance Bar */}
       <div className="mt-[-100px] px-4 sm:px-12 md:px-20 relative z-10">
-        <div className="bg-plum py-16 px-6 rounded-xl max-w-7xl mx-auto">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-light-gray text-center">
-            <h4 className="text-2xl">
-              we accept <span className="italic text-[#C3CDEB]">insurance.</span>
-            </h4>
-            <div className="flex flex-wrap justify-center gap-6 items-center">
-              <div className="w-24 h-6 bg-white/20 rounded-sm" />
-              <div className="w-24 h-6 bg-white/20 rounded-sm" />
-              <div className="w-24 h-6 bg-white/20 rounded-sm" />
-              <div className="w-24 h-6 bg-white/20 rounded-sm" />
-            </div>
-            <p className="text-sm text-light-gray">
-              don’t see yours?{' '}
-              <a href="mailto:allmadheretherapysolutions@outlook.com" className="underline text-[#C3CDEB]">
-                email me for the full list &gt;
-              </a>
-            </p>
+  <div className="bg-plum py-16 px-6 rounded-xl max-w-7xl mx-auto">
+    <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-light-gray text-center">
+      <h4 className="text-2xl">
+        we accept <span className="italic text-[#C3CDEB]">insurance.</span>
+      </h4>
+      <div className="flex flex-wrap justify-center gap-6 items-center">
+        <img src="/Kaiser-logo.png" alt="Kaiser" className="h-8 w-auto object-contain" />
+        <img src="/Regence-icon.png" alt="Regence" className="h-8 w-auto object-contain" />
+        <img src="/UN-logo.png" alt="United Healthcare" className="h-8 w-auto object-contain" />
+        <img src="/cigna-logo.png" alt="Cigna" className="h-8 w-auto object-contain" />
+        <img src="/aetna-logo.png" alt="Aetna" className="h-8 w-auto object-contain" />
+      </div>
+      <p className="text-sm text-light-gray">
+        don’t see yours?{' '}
+        <a href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" className="underline text-[#C3CDEB]">
+          view the full list &gt;
+        </a>
+      </p>
           </div>
         </div>
       </div>
