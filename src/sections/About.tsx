@@ -36,7 +36,7 @@ const tabContent: Record<TabKey, {
         </p>
       </>
     ),
-    image: '/Alice-About-Picture.png',
+    image: '/Alice About Image.png',
   },
   background: {
     icon: '/my-background.svg',
