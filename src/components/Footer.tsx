@@ -19,8 +19,7 @@ export default function Footer() {
             We’re All Mad Here Therapy Solutions, PLLC
           </p>
           <p className="mt-2 text-sm">
-            We provide comprehensive therapy solutions to everyone, from all walks of life.
-            We specialize in therapy for LGBTQ2IA+, adolescents to adults, families & the geriatric population.
+            Offering licensed virtual therapy in Washington State, we provide compassionate, identity-affirming mental health support for LGBTQ2IA+ individuals, families, aging adults, and those in non-traditional or alternative relationships. Specializing in LGBTQ affirming therapy, polyamory-affirming counseling, and end-of-life mental health care.
           </p>
         </div>
 
@@ -31,7 +30,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 flex-1">
           {/* Column 2: Contact */}
           <div>
-            <h4 className="font-semibold font-sans text-base mb-4 text-[#86ABBA]">contact</h4>
+            <h4 className="font-semibold font-sans text-base mb-4 text-[#86ABBA]">Contact</h4>
             <div className="flex items-center gap-2 mb-4">
               <Image src="/email-pink.svg" alt="Email" width={16} height={16} />
               <a href="mailto: mary@allmadheretherapy.com" className="hover:text-white transition hover:opacity-80 hover:underline text-wrap break-all"> mary@allmadheretherapy.com</a>
@@ -40,14 +39,14 @@ export default function Footer() {
               <Image src="/phone-pink.svg" alt="Phone" width={16} height={16} />
               <a href="tel:6823920896" className="hover:text-white transition hover:opacity-80 hover:underline">(682) 392-0896</a>
             </div>
-            <h4 className="font-semibold font-sans text-base mb-4 text-[#86ABBA]">hours & location</h4>
+            <h4 className="font-semibold font-sans text-base mb-4 text-[#86ABBA]">Hours & Location</h4>
             <div className="flex items-center gap-2 mb-4">
               <Image src="/calendar-pink.svg" alt="Calendar" width={16} height={16} />
               <span>9am – 5pm, Mon–Fri</span>
             </div>
             <div className="flex items-center gap-2 mb-2">
               <Image src="/location-pink.svg" alt="Location" width={16} height={16} />
-              <span>Washington Telehealth</span>
+              <span>Telehealth Services Across Washington State</span>
             </div>
           </div>
 

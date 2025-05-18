@@ -16,7 +16,7 @@ export function Hero() {
         <div className="space-y-4 sm:space-y-6">
           <div className="relative inline-flex items-center gap-1">
             <img src="/location.svg" alt="Location" />
-            <p className="text-md sm:text-lg text-[#6493A5]">Washington State Telehealth</p>
+            <p className="text-md sm:text-lg text-[#6493A5]">Serving Washington State — Telehealth</p>
             <span
               className="absolute left-0 -bottom-[2px] h-[1px] w-full"
               style={{ backgroundColor: '#6493A5', opacity: 0.4 }}
@@ -39,13 +39,13 @@ export function Hero() {
           />
 
           <p className="text-plum/70 max-w-lg">
-          <span className='font-bold'>Mental health at your fingertips.</span> <br /> 
-          Whether you're navigating anxiety, identity, relationships, or the weight of it all, you're not alone — and you don't have to figure it out by yourself. Help is just a tap away.
+          <span className='font-bold'>Licensed, affirming therapy from the comfort of home.</span> <br /> 
+          Whether you're navigating anxiety, identity, relationships, or the weight of it all, you're not alone — and you don’t have to figure it out by yourself. As a licensed therapist offering online counseling across Washington, I’m here to support your journey.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 max-w-[500px]">
             <Button text="Book Now" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="gradient" />
-            <Button text="Services" href="#Services" color="purple" />
+            <Button text="Explore Services" href="#Services" color="purple" />
           </div>
 
           <div className="flex flex-wrap justify-center sm:justify-normal items-center gap-x-4 gap-y-4 pt-2 text-md text-[#6493A5]">

@@ -27,8 +27,7 @@ const tabContent: Record<TabKey, {
     text: (
       <>
         <p className="max-w-[470px]">
-          A space where the strange, the sensitive, the searching, and the beautifully complex are all welcome.
-          Rooted in LGBTQ2IA+ care, we specialize in creating a therapeutic space where identity, emotion, and imagination are embraced.
+          A virtual therapy space for the beautifully complex. Based in Washington, I provide online therapy for LGBTQ2IA+ individuals, alternative relationships, caregivers, and older adults. Rooted in gender-affirming, trauma-informed care, our approach honors your identity, your story, and your path forward.
         </p>
         <br />
         <p className="font-bold max-w-[470px]">
