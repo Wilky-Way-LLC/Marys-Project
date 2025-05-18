@@ -6,8 +6,11 @@ import Banner from '../components/Banner'
 import ScrollRestoration from '../components/ScrollRestoration'
 
 export const metadata: Metadata = {
-  title: "Mary's Website",
-  description: "Welcome to Mary's website",
+  title: "We're All Mad Here Therapy",
+  description: "Home | We're All Mad Here Therapy",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
