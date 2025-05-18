@@ -58,7 +58,7 @@ export default function ContactSection() {
     <div className="flex items-center justify-center gap-2">
       <Image src="/email.svg" alt="Email" width={16} height={16} />
       <a
-        href="mailto:allmadheretherapysolutions@outlook.com"
+        href="mailto: mary@allmadheretherapy.com"
         className="border-b border-[#86bdd357] hover:text-[#A0C6D6] transition-all duration-300 pb-[1px]"
       >
         Email Me
