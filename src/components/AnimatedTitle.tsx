@@ -7,8 +7,8 @@ interface AnimatedTitleProps {
   phrases: string[]
   arrowSrc?: string
   className?: string
-  prefixColorClass?: string // <-- NEW for prefix text
-  animatedColorClass?: string // <-- NEW for animated typing text
+  prefixColorClass?: string
+  animatedColorClass?: string
   bgColorClass?: string
   arrowClassName?: string
   prefix?: string | React.ReactNode
@@ -33,12 +33,24 @@ export default function AnimatedTitle({
   const [phraseIndex, setPhraseIndex] = useState(0)
   const [typedText, setTypedText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
+  const [isTypingStarted, setIsTypingStarted] = useState(false)
 
   const typingSpeed = 100
   const deletingSpeed = speed === 'fast' ? 30 : 50
   const pauseTime = speed === 'fast' ? 2000 : 8000
 
+  // Delay typing to allow fast paint
   useEffect(() => {
+    const startDelay = setTimeout(() => {
+      setIsTypingStarted(true)
+    }, 300) // Adjust delay here
+
+    return () => clearTimeout(startDelay)
+  }, [])
+
+  useEffect(() => {
+    if (!isTypingStarted) return
+
     const currentPhrase = phrases[phraseIndex]
     let timeout: NodeJS.Timeout
 
@@ -61,32 +73,31 @@ export default function AnimatedTitle({
     }
 
     return () => clearTimeout(timeout)
-  }, [typedText, isDeleting, phraseIndex, phrases, deletingSpeed, pauseTime])
+  }, [typedText, isDeleting, phraseIndex, phrases, deletingSpeed, pauseTime, isTypingStarted])
 
-  const Tag = as;
+  const Tag = as
 
-return (
-  <Tag className={className}>
-    {/* Prefix Text */}
-    {prefix && <span className={`${prefixColorClass}`}>{prefix}</span>}
+  return (
+    <Tag className={className}>
+      {/* Prefix Text */}
+      {prefix && <span className={prefixColorClass}>{prefix}</span>}
 
-    {/* Animated Text */}
-    <span className={`${bgColorClass} inline-flex items-center gap-2 min-h-[1.2em]`}>
-      <span className={`italic font-normal ${animatedColorClass}`}>
-        {typedText}
-        <span className="ml-1 w-[3px] h-[1.2em] bg-current inline-block animate-blink" />
+      {/* Animated Text */}
+      <span className={`${bgColorClass} inline-flex items-center gap-2 min-h-[1.2em]`}>
+        <span className={`italic font-normal ${animatedColorClass}`}>
+          {typedText}
+          <span className="ml-1 w-[3px] h-[1.2em] bg-current inline-block animate-blink" />
+        </span>
+        {arrowSrc && (
+          <Image
+            src={arrowSrc}
+            alt="Arrow"
+            width={80}
+            height={20}
+            className={arrowClassName}
+          />
+        )}
       </span>
-      {arrowSrc && (
-        <Image
-          src={arrowSrc}
-          alt="Arrow"
-          width={80}
-          height={20}
-          className={arrowClassName}
-        />
-      )}
-    </span>
-  </Tag>
-)
+    </Tag>
+  )
 }
-

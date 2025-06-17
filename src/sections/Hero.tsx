@@ -2,11 +2,8 @@
 
 import { Button } from '../components/Button'
 import CurvedDivider from '../components/CurvedDivider'
-import dynamic from 'next/dynamic'
+import AnimatedTitle from '../components/AnimatedTitle'
 
-const AnimatedTitle = dynamic(() => import('../components/AnimatedTitle'), {
-  ssr: false
-})
 
 export function Hero() {
   return (
