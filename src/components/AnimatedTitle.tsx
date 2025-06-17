@@ -33,24 +33,12 @@ export default function AnimatedTitle({
   const [phraseIndex, setPhraseIndex] = useState(0)
   const [typedText, setTypedText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
-  const [isTypingStarted, setIsTypingStarted] = useState(false)
 
   const typingSpeed = 100
   const deletingSpeed = speed === 'fast' ? 30 : 50
   const pauseTime = speed === 'fast' ? 2000 : 8000
 
-  // Delay typing to allow fast paint
   useEffect(() => {
-    const startDelay = setTimeout(() => {
-      setIsTypingStarted(true)
-    }, 300) // Adjust delay here
-
-    return () => clearTimeout(startDelay)
-  }, [])
-
-  useEffect(() => {
-    if (!isTypingStarted) return
-
     const currentPhrase = phrases[phraseIndex]
     let timeout: NodeJS.Timeout
 
@@ -73,7 +61,7 @@ export default function AnimatedTitle({
     }
 
     return () => clearTimeout(timeout)
-  }, [typedText, isDeleting, phraseIndex, phrases, deletingSpeed, pauseTime, isTypingStarted])
+  }, [typedText, isDeleting, phraseIndex, phrases, deletingSpeed, pauseTime])
 
   const Tag = as
 
