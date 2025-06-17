@@ -67,7 +67,7 @@ export function Hero() {
         {/* Right Image */}
         <div className="flex justify-center lg:ml-28 pb-4 mr-3 lg:pr-6">
           <img
-            src="/mary-hero.png"
+            src="/Mary-Hero-Compressed.jpg"
             alt="Mary"
             className="max-w-full max-h-[600px] min-w-[340px] w-auto h-auto rounded-lg object-cover"
           />

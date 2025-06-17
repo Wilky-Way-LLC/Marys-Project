@@ -6,11 +6,11 @@ import Banner from '../components/Banner'
 import ScrollRestoration from '../components/ScrollRestoration'
 
 export const metadata: Metadata = {
-  title: "We're All Mad Here Therapy",
+  title: "We're All Mad Here Therapy | Washington State Telehealth",
   description: "Home | We're All Mad Here Therapy",
   icons: {
     icon: "/favicon.ico",
-  },
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

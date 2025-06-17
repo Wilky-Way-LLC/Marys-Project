@@ -35,7 +35,7 @@ const tabContent: Record<TabKey, {
         </p>
       </>
     ),
-    image: '/Alice About Image.png',
+    image: '/Alice About Image.jpg',
   },
   background: {
     icon: '/my-background.svg',
@@ -55,7 +55,7 @@ const tabContent: Record<TabKey, {
       
       </>
     ),
-    image: '/Mary-Background.png',
+    image: '/Mary-Background-Compressed.jpg',
   },
   education: {
     icon: '/my-education.svg',
@@ -76,7 +76,7 @@ const tabContent: Record<TabKey, {
       </p>
       </>
     ),
-    image: '/mary-education.png',
+    image: '/mary-education.jpg',
   },
 }
 
