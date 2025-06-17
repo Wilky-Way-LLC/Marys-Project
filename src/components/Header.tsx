@@ -41,17 +41,24 @@ export function Header() {
         scrolledDown ? 'py-2' : 'py-4'
       )}
     >
-      {/* Inner container for layout */}
-      <div className="flex items-center justify-between relative px-4 sm:px-8 max-w-[1600px] mx-auto ">
-        {/* Logo */}
+      {/* Inner container */}
+      <div className="flex items-center justify-between relative px-4 sm:px-8 max-w-[1600px] mx-auto">
+        {/* Logo with fixed size + transition */}
         <a href="/" className="flex items-center transition-all duration-300">
-          <Image
-            src="/logo.svg"
-            alt="Logo"
-            width={scrolledDown ? 100 : 140}
-            height={scrolledDown ? 100 : 140}
-            className="transition-all duration-300"
-          />
+          <div
+            className={clsx(
+              "relative transition-all duration-300",
+              scrolledDown ? "w-[100px] h-[32px]" : "w-[140px] h-[45px]"
+            )}
+          >
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
         </a>
 
         {/* Desktop Nav */}
@@ -65,10 +72,14 @@ export function Header() {
 
         {/* CTA Button */}
         <div className="hidden lg:block w-[200px]">
-          <Button text="Book Now" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="gradient" />
+          <Button
+            text="Book Now"
+            href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634"
+            color="gradient"
+          />
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Toggle */}
         <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden z-50">
           {mobileOpen ? (
             <X className="w-10 h-10 bg-cta-pink/30 rounded-lg" />
@@ -78,7 +89,7 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Nav - animated dropdown with rounded corners + max-width */}
+      {/* Mobile Nav */}
       <div
         className={clsx(
           'absolute top-full left-0 right-0 z-40 lg:hidden flex justify-center transition-all duration-300 ease-in-out',
@@ -94,7 +105,12 @@ export function Header() {
               <a href="#FAQ" className="hover:text-cta-pink" onClick={handleLinkClick}>FAQ</a>
               <a href="#Contact" className="hover:text-cta-pink" onClick={handleLinkClick}>Contact</a>
             </nav>
-            <Button text="Book Now" href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634" color="gradient" className="mt-6" />
+            <Button
+              text="Book Now"
+              href="https://mindfultherapygroup.com/find-a-provider/?providerId=4339273000219393634"
+              color="gradient"
+              className="mt-6"
+            />
           </div>
         </div>
       </div>
