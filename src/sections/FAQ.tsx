@@ -66,7 +66,7 @@ export default function FAQSection() {
         {/* Right image (stacked first on mobile) */}
         <div className="relative lg:order-1 order-none w-[300px] sm:w-auto mx-auto max-w-[450px] lg:mr-20">
           <Image
-            src="/FAQ-image.png"
+            src="/FAQ-image.jpg"
             alt="FAQ illustration"
             width={500}
             height={600}

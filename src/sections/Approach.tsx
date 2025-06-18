@@ -10,7 +10,7 @@ export default function Approach() {
           {/* Image */}
           <div className="w-full md:w-1/2">
             <Image
-              src="/my-approach.png"
+              src="/my-approach.jpg"
               alt="Alice tea party"
               width={600}
               height={400}

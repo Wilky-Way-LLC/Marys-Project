@@ -33,7 +33,7 @@ export default function CTAfooter() {
         <div className="flex justify-center lg:justify-end shrink-0 w-full lg:w-auto">
   <div className="">
     <Image
-      src="/Alice-Footer.png"
+      src="/Alice-Footer.jpg"
       alt="Alice Illustration"
       width={420}
       height={520}

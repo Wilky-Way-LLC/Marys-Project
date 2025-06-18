@@ -44,7 +44,7 @@ const specialties = [
     id: 'geriatric',
     title: 'Geriatric',
     icon: '/65+.svg',
-    image: '/geriatric-photo.png',
+    image: '/geriatric-photo.jpg',
     content: (
       <p>
         Aging brings change — in our roles, bodies, and relationships. I work with older adults facing grief, isolation,
@@ -58,7 +58,7 @@ const specialties = [
     id: 'families',
     title: 'Families',
     icon: '/families.svg',
-    image: '/family-picture.png',
+    image: '/family-picture.jpg',
     content: (
       <p>
         Family life is complex. I help families strengthen communication, resolve conflict, and adapt to life’s changes together.
